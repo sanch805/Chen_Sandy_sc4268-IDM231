@@ -10,6 +10,28 @@
     
 <body>
     <script src="scripts/app.js"></script>
+    <form 
+    action="event.php"
+    method="POST">
+        <fieldset>
+            <label for="username">username</label>
+            <input
+            type="text"
+            name="username"
+            value=""
+            placeholder="John Doe"
+            required
+         />
+        </fieldset>
+
+        <label for="birthday">birthday</label>
+        <input
+        type="date"
+        name="birthday"
+        required
+     />
+        <button type="submit">Submit</button>
+    </form>
 </body>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,3 +41,7 @@
 <body>
 <script src="Variables.js"></script>
 </body>
+
+<form action="main.js">
+    <input> type = 'date' name= 'birthday'
+</form>
