@@ -1,22 +1,3 @@
-const signs [
-    {
-        image: 'red',
-        description: 'blue';
-        sound:'nay',
-    },
-    {
-        image: 'red',
-        description: 'blue';
-        sound:'nay',
-    }
-]
-    
-// putting it into global scope and not just in function
-const all_signs = []
-const birthday_form = document.querySelector(`form`)
-let el_grid
-let el_description
-
 /**
  * @description
  * Given a month and day, determine the corresponding Zodiac sign.
@@ -24,6 +5,76 @@ let el_description
  * @param {number} day - day of the month (1-31)
  * @returns {string} the corresponding Zodiac sign
  */
+
+const signs [
+    {
+        image: 'cd_image',
+        description: 'Insert the CD of your favorite game!',
+        sound: 'insert-cd.mp3',
+    },
+    {
+        image: 'mii_image',
+        description: 'Customize and play with your Miis!',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii_photo_channel',
+        description: 'Save and look back at all your Wii memories here',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii news channel',
+        description: 'Bringing you the latest news!',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii forecast channel',
+        description: 'Will it be rainy or sunny today? Check back for hourly reports!',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii netflix channel',
+        description: 'Ready to Netflix and chill?',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii justdance game',
+        description: 'Just Dance! ٩(ˊᗜˋ )و',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii sports game',
+        description: 'Time to get active! ᕕ( ᐛ )ᕗ',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii animal crossing game',
+        description: 'Relax and spend time with your villagers ଘ(੭ˊᵕˋ)੭* ੈ✩‧',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii supersmash game',
+        description: 'Grab your next competitor and brawl it out!',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii potc game',
+        description: '*lego breaking noises*',
+        sound: 'mii.mp3'',
+    },
+    {
+        image: 'wii shop channel',
+        description: 'Shop new apps and games!',
+        sound: 'mii.mp3'',
+    },
+
+]
+    
+// putting it into global scope and not just in function
+const all_signs = []
+const birthday_form = document.querySelector(`form`)
+let el_grid
+let el_description
 
 function update_display(color){
     document.body.style.backgroundColor = `var(--color-${color}-300)`
