@@ -12,13 +12,6 @@ function play_sound(selected_sign) {
     
 }
 
-const wii [
-    {
-        name: CD
-        // color: 
-        // sound:
-    }
-]
 
 function build_my_list() {
     const my_wii_games = ['cd', 'mii', 'photo', 'news'];
