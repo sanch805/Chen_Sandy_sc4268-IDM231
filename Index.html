@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--how to make this full height?-->
+    <meta charset="utf-8">
 
 <head>
-    <title>Which Wii</title>
-    <link rel="icon" type="image/png" href="media/mii.png">
-    <link rel="font" href="css/digital-7.ttf">
-    
- <style>
+    <title>Wii Wii</title>
+    <link rel="icon" type="image/png" href="media/cherry_blossom.png">
+    <link rel="stylesheet" href="css/digital-7.ttf">
+        
+<style>
 * {
     margin: 0;
     box-sizing: border-box;
@@ -27,12 +26,25 @@ a {
     color: #222;
 }
 
+form {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 20px;
+    cursor: url("css/Wii Cursor.cur"), default;
+
+}
+
+button {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
 main ul.navigation {
     display: flex;
     width: 90%;
-    max-width: 1200px;
-    margin: 10vh auto;
-    padding: 1rem;
+    max-width: 1300px;
+    margin: auto;
     flex-wrap: wrap;
     list-style-type: none;
 }
@@ -79,31 +91,10 @@ main ul.navigation li {
     visibility: hidden;
 }
 
-.content .container {
-    width: 500px;
-    background: white;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-}
-
 .content:target {
     visibility: visible;
     pointer-events: auto;
     opacity: 1;
-}
-
-.back {
-    border-radius: 1.4rem;
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08), 0 0 0 4px white, 2px 2px 10px rgba(0, 0, 0, 0.2), 0 0 4px 2px rgba(0, 0, 0, 0.4);
-    display: inline-block;
-    padding: 0.4rem 1rem;
-    text-align: center;
-    color: black;
-    width: 80%;
-    background: linear-gradient(to bottom, rgb(243, 243, 243) 70%, rgba(0, 0, 0, 0.2));
-    cursor: url("css/Wii Cursor.cur"), default;
 }
 
 li img {
@@ -113,198 +104,54 @@ li img {
     object-position: center;
 }
 
-.clock-container {
+p {
     text-align: center;
-    padding-bottom: 30px;
+    font-size: 28px;
+    font-family: 'Digital-7', monospace;
+    color: #7b7b7b;
+    margin: 1.8rem auto;
 }
 
 .time {
-    font-size: 62px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 50px;
     font-family: 'Digital-7', monospace;
     color: #adabab;
     letter-spacing: 3px;
 }
-
-.footer {
-    position: relative;
-    background-image: url("media/Wii-Navigation.png");
-    /* ^^^ why wont this show??? */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input[type="date"] {
-    padding: 12px 20px;
-    font-family: 'Digital-7', monospace;
-    font-size: 21px;
-    border-radius: 1rem;
-    border-color: #adabab;
-    cursor: url("css/Wii Cursor.cur"), default;
-}
-
 </style>
 </head>
 
 <body>
-    <script src="main.js"></script>
+    <form 
+    method="POST">
+        <label for="username">Username: </label>
+        <input
+        type="text"
+        name="username"
+        placeholder="John Doe"
+        required
+    />
+    <br>
+        <label for="birthday">Birthday: </label>
+        <input
+        type="date"
+        name="birthday"
+        required
+     />
+     <br>
+        <button type="submit">Find my Channel!</button> 
+    </form>
 
     <main>
-        <ul class="navigation">
-            <li>
-                <a href="#container-1">
-                    <img src="media/wii_cd.jpg" alt="cd image" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-2">
-                    <img src="media/wii_mii.jpg" alt="mii image" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-3">
-                    <img src="media/wii_photo.jpg" alt="wii photo channel" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-4">
-                    <img src="media/wii_news.png" alt="wii news channel" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-5">
-                    <img src="media/wii_forecast.jpg" alt="wii forecast channel" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-6">
-                    <img src="media/wii_netflix.png" alt="wii netflix channel" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-7">
-                    <img src="media/wii_justdance.jpeg" alt="wii justdance game" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-8">
-                    <img src="media/wii_sport.jpg" alt="wii sports game" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-9">
-                    <img src="media/wii-animalcrossing.jpg" alt="wii animal crossing game" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-10">
-                    <img src="media/wii_supersmash.jpg" alt="wii supersmash game" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-11">
-                    <img src="media/wii_potc.jpg" alt="wii potc game" />
-                </a>
-            </li>
-            <li>
-                <a href="#container-12">
-                    <img src="media/wii_shop.jpg" alt="wii shop channel" />
-                </a>
-            </li>
-        </ul>
- 
-        <div id="container-1" class="content">
-            <div class="container">
-                <p>Insert the CD of your favorite game!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-2" class="content">
-            <div class="container">
-                <p>Customize and play with your Miis!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-3" class="content">
-            <div class="container">
-                <p>Save and look back at all your Wii memories here!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-4" class="content">
-            <div class="container">
-                <p>Bringing you the latest news!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-5" class="content">
-            <div class="container">
-                <p>Will it be rainy or sunny today? Check back for hourly reports!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-6" class="content">
-            <div class="container">
-                <p>Ready to Netflix and chill?</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-7" class="content">
-            <div class="container">
-                <p>Just Dance! ٩(ˊᗜˋ )و</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-8" class="content">
-            <div class="container">
-                <p>Time to get active! ᕕ( ᐛ )ᕗ</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-9" class="content">
-            <div class="container">
-                <p>Relax and spend time with your villagers ଘ(੭ˊᵕˋ)੭* ੈ✩‧˚ </p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-10" class="content">
-            <div class="container">
-                <p>Grab your next competitor and brawl it out!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-11" class="content">
-            <div class="container">
-                <p>*lego breaking noises*</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
-
-        <div id="container-12" class="content">
-            <div class="container">
-                <p>Shop new apps and games!</p>
-                <a href="#" class="back">Back</a>
-            </div>
-        </div>
     </main>
 
     <div class="clock-container">
         <div class="time" id="time"></div>
     </div>
+
+    <script src="test.js"></script>
 
     <script>
         function updateTime() {
@@ -325,10 +172,6 @@ input[type="date"] {
         updateTime();
         setInterval(updateTime, 60000);
     </script>
-
-    <div class="footer">
-        <input type="date">
-    </div>
     
     </body>
 </html>
