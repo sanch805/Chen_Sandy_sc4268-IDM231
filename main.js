@@ -6,6 +6,7 @@
  * @returns {string} the corresponding Channel sign
  */
 
+
 const channels = [
     {
         image: 'media/wii_cd.jpg',
@@ -92,6 +93,9 @@ const channels = [
         month: 12,
     },
 ];
+
+const channel_audio = new Audio(`sounds/${channel.sound}`)
+    channel.audio = channel_audio
     
 // putting it into global scope and not just in function
 const all_channels = []

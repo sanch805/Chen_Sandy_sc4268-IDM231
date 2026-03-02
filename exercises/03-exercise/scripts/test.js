@@ -24,7 +24,7 @@ const channels = [
         image: 'media/wii_photo.jpg',
         alt: 'wii photo channel',
         description: 'Save and look back at all your Wii memories here!',
-        sound: 'photo.mp3',
+        sound: 'photo-channel.mp3',
         month: 3,
     },
     {
@@ -38,7 +38,7 @@ const channels = [
         image: 'media/wii_forecast.jpg',
         alt: 'wii forecast channel',
         description: 'Will it be rainy or sunny today? Check back for hourly reports!',
-        sound: 'forecast.mp3',
+        sound: 'weather.mp3',
         month: 5,
     },
     {
@@ -66,7 +66,7 @@ const channels = [
         image: 'media/wii-animalcrossing.jpg',
         alt: 'wii animal crossing game',
         description: 'Relax and spend time with your villagers ଘ(੭ˊᵕˋ)੭* ੈ✩‧˚',
-        sound: 'animalcrossing.mp3',
+        sound: 'animal-crossing.mp3',
         month: 9,
     },
     {
@@ -80,7 +80,7 @@ const channels = [
         image: 'media/wii_potc.jpg',
         alt: 'wii potc game',
         description: '*lego breaking noises*',
-        sound: 'potc.mp3',
+        sound: 'pirates.mp3',
         month: 11,
     },
     {
@@ -92,11 +92,17 @@ const channels = [
     },
 ];
 
-// global scope
+// putting it into global scope and not just in function
 const all_channels = []
 const birthday_form = document.querySelector('form')
-let el_nav
+let el_grid
 let el_description
+
+function update_description(channel) {
+    if (el_description) {
+        el_description.innerText = `You've selected ${channel.alt}. ${channel.description}`
+    }
+}
 
 function play_sound(channel) {
     all_channels.forEach(c => {
@@ -106,12 +112,6 @@ function play_sound(channel) {
 
     channel.audio.currentTime = 0
     channel.audio.play()
-}
-
-function update_description(channel) {
-    if (el_description) {
-        el_description.innerText = `You've selected ${channel.alt}. ${channel.description}`
-    }
 }
 
 function update_ui(channel) {
