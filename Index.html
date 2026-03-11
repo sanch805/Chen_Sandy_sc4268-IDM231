@@ -120,6 +120,57 @@ p {
     color: #adabab;
     letter-spacing: 3px;
 }
+
+footer {
+    position: fixed;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.button-cont {
+    position: absolute;
+    width: 200px;
+    left: 0;
+    z-index: 1;
+    margin-left: -50px;
+    padding: 1rem;
+    padding-left: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6rem;
+    display: flex;
+    border: 2.4px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
+    align-items: center;
+}
+        
+.button-cont.right-side {
+    left: auto;
+    right: -40px;
+    padding-left: 1rem;
+    padding-right: 200px;
+}
+
+.button-cont.right-side .button {
+    margin-left: .1rem;
+}
+        
+.button-cont .button {
+    min-width: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transform: scale(1.2);
+    align-items: center;
+    border-radius: 100%;
+    height: 70px;
+    border-width: 4px;
+    margin-left: -70px;
+    border: 2.4px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
+}
 </style>
 </head>
 
@@ -173,5 +224,20 @@ p {
         setInterval(updateTime, 60000);
     </script>
     
+    <footer>
+        <div class="button-cont">
+            <a class="button">
+                <span class="corner"></span>
+                <span class="text">Home</span>
+            </a>
+        </div>
+
+        <div class="button-cont right-side">
+            <a class="button">
+                <span class="corner"></span>
+                <span class="text">Ask</span>
+            </a>
+        </div>
+
     </body>
 </html>
