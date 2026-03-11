@@ -37,7 +37,7 @@ const channels = [
     {
         image: 'media/wii_forecast.jpg',
         alt: 'wii forecast channel',
-        description: 'Will it be rainy or sunny today? Check back for hourly reports!',
+        description: 'Check back for hourly weather reports!',
         sound: 'weather.mp3',
         month: 5,
     },
@@ -51,21 +51,21 @@ const channels = [
     {
         image: 'media/wii_justdance.jpeg',
         alt: 'wii justdance game',
-        description: 'Just Dance! ٩(ˊᗜˋ )و',
+        description: 'Just Dance!',
         sound: 'justdance.mp3',
         month: 7,
     },
     {
         image: 'media/wii_sport.jpg',
         alt: 'wii sports game',
-        description: 'Time to get active! ᕕ( ᐛ )ᕗ',
+        description: 'Time to get active!',
         sound: 'sports.mp3',
         month: 8,
     },
     {
         image: 'media/wii-animalcrossing.jpg',
         alt: 'wii animal crossing game',
-        description: 'Relax and spend time with your villagers ଘ(੭ˊᵕˋ)੭* ੈ✩‧˚',
+        description: 'Relax and spend time with your villagers!',
         sound: 'animal-crossing.mp3',
         month: 9,
     },
