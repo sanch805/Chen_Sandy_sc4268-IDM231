@@ -214,15 +214,13 @@ function initialize() {
     const fade = document.getElementById('fade')
     const light = document.getElementById('light')
 
-    document.getElementById('ask-btn').addEventListener ('click', (e) => {
+    document.getElementById('ask-btn').addEventListener('click', (e) => {
         e.preventDefault()
-        fade.style.display = 'flex'
         light.style.display = 'block'
     })
-
-    document.getElementById('close-btn').   addEventListener('click', (e) => {
+    
+    document.getElementById('close-btn').addEventListener('click', (e) => {
         e.preventDefault()
-        fade.style.display = 'none'
         light.style.display = 'none'
     })
 }
