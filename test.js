@@ -115,6 +115,12 @@ function play_sound(channel) {
 }
 
 function update_ui(channel) {
+    document.querySelectorAll('.navigation li').forEach(li => li.classList.remove('active'))
+
+    const index = channels.indexOf(channel) + 1
+    const activeLi = document.querySelector(`#nav-list li:nth-child(${index})`)
+    if (activeLi) activeLi.classList.add('active')
+
     update_description(channel)
     play_sound(channel)
 }
@@ -204,6 +210,21 @@ function initialize() {
     if (birthday_form) {
         birthday_form.addEventListener('submit', handle_form)
     }
+
+    const fade = document.getElementById('fade')
+    const light = document.getElementById('light')
+
+    document.getElementById('ask-btn').addEventListener ('click', (e) => {
+        e.preventDefault()
+        fade.style.display = 'flex'
+        light.style.display = 'block'
+    })
+
+    document.getElementById('close-btn').   addEventListener('click', (e) => {
+        e.preventDefault()
+        fade.style.display = 'none'
+        light.style.display = 'none'
+    })
 }
 
 document.addEventListener('DOMContentLoaded', initialize)
